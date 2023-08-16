@@ -234,7 +234,7 @@ def get_active_addresses(addresses):
     - addresses (List[str]): List of addresses to query for.
 
     Returns:
-    - dict: Response from the Elasticsearch query.
+    - list[str]: list of active addresses on the Mainnet.
     """
     # Elasticsearch query URL
     query_url = 'https://index.multiversx.com/accounts/_search'
@@ -334,7 +334,7 @@ def find_matching_contracts(abi_jsons, sc_addresses, url):
     - url (str): URL from where the ABI JSONs were extracted.
 
     Returns:
-    - dict: Dictionary mapping contract addresses to their corresponding ABI JSON paths.
+    - None
     """
     relationship_dict = {}
     parsed_url = urlparse(url)
